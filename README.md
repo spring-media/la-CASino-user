@@ -1,23 +1,25 @@
-# la-guna
+# la-CASino-user
 
-Small js library that gives you information about User login and abo state.
+Small js library that gives you information about user login and abo state.
 
 ### Install:
-    npm install -save-dev git+https://git@github.com:WeltN24/la-guna.git
+    npm install -save-dev git+https://git@github.com:WeltN24/la-CASino-user.git
 
-### Usage:
+### Usage of library:
 
+*Typescript*:
 ```ts
-import { Laguna } from "la-guna";
+import { UserService } from "la-CASino-user";
 
-const info = Laguna.userInfo();
+const user = UserService.getUser();
+user.isUserLoggedIn();
 ```
 
+*Javascript*:
 ```js
-const Laguna = require('la-guna').Greeter;
+const user = require('la-CASino-user').user;
 
-const greeter = new Greeter('World!');
-greeter.greet();
+user.isUserLoggedIn();
 ```
 
 ### Development:

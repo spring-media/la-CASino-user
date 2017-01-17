@@ -1,2 +1,2 @@
 import { UserService } from "./service/UserService";
-export { UserService };
+export declare const user: UserService;

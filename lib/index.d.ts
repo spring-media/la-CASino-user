@@ -1,4 +1,6 @@
-export declare function getUser(): any;
+import { User } from "./model/User";
+export { User } from "./model/User";
+export declare function getUser(): User;
 export declare function getUserProducts(): Array<string>;
 export declare function isUserLoggedIn(): boolean;
 export declare function isUpdateForced(): boolean;

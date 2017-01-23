@@ -4,7 +4,7 @@ export class User {
     private id: string; //SsoId
     private fn: string; //fistName
     private ln: string; //lastName
-    private a:  boolean; //activated
+    private a: boolean; //activated
     private p: string[]; // products
     private token: string;
 
@@ -21,21 +21,27 @@ export class User {
     public getSsoId(): string {
         return this.id;
     }
+
     public getExpireDate(): Date {
         return this.exp;
     }
+
     public getFirstName(): string {
         return this.fn;
     }
+
     public getLastName(): string {
         return this.ln;
     }
+
     public isActivated(): boolean {
         return this.a;
     }
+
     public getProducts(): string[] {
         return this.p;
     }
+
     public getToken(): string {
         return this.token;
     }

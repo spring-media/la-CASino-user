@@ -9,15 +9,17 @@ Small js library that gives you information about user login and abo state.
 
 *Typescript*:
 ```ts
-import { UserService } from "la-CASino-user";
+import * as user from "la-CASino-user";
 
-const user = UserService.getUser();
+// get data about current user
+user.getUser();
+
 user.isUserLoggedIn();
 ```
 
 *Javascript*:
 ```js
-const user = require('la-CASino-user').user;
+const user = require('la-CASino-user');
 
 user.isUserLoggedIn();
 ```

@@ -1,6 +1,6 @@
 {
     "name": "la-CASino-user",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "small javascript library to get user state on welt.de",
     "license": "MIT",
     "repository": "",

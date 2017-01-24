@@ -12,7 +12,6 @@ export class UserService {
 
     private user: User;
     private invalidData: boolean = false;
-    private alreadyParsed: boolean = false;
     private updateWindowBeforeExpiration: number = 1800 * 1000;
 
     public static instance(): UserService {
@@ -39,12 +38,9 @@ export class UserService {
     }
 
     public getUser(): User {
-        if (!this.alreadyParsed) {
-            const rawData: string = this.storageService.getUserSessionData();
-            if (rawData !== undefined) {
-                this.user = this.parseUserFromRawData(rawData);
-            }
-            this.alreadyParsed = true;
+        const rawData: string = this.storageService.getUserSessionData();
+        if (rawData !== undefined) {
+            this.user = this.parseUserFromRawData(rawData);
         }
         return this.user;
     }

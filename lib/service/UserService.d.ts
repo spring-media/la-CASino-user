@@ -5,7 +5,6 @@ export declare class UserService {
     private storageService;
     private user;
     private invalidData;
-    private alreadyParsed;
     private updateWindowBeforeExpiration;
     static instance(): UserService;
     isUserLoggedIn(): boolean;

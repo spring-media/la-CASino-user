@@ -14,7 +14,11 @@ import * as user from "la-CASino-user";
 // get data about current user
 user.getUser();
 
+// get purchased products 
+user.getUser().products;
+
 user.isUserLoggedIn();
+user.isUserSessionExpired();
 ```
 
 *Javascript*:

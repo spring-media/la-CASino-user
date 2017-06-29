@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./lib",
+    "declarationDir": "./lib/typings",
     "preserveConstEnums": true,
     "removeComments": true
   },
@@ -13,6 +14,7 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*-spec.ts"
+    "**/*-spec.ts",
+    "lib"
   ]
 }

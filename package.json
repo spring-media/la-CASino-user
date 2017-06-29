@@ -1,18 +1,22 @@
 {
-    "name": "la-CASino-user",
-    "version": "0.0.2",
-    "description": "small javascript library to get user state on welt.de",
-    "license": "MIT",
-    "repository": "",
-    "author": "",
-    "keywords": [
-        ""
-    ],
+    "name": "@weltn24/la-CASino-user",
+    "version": "1.0.0",
+    "description": "get user state on welt.de",
+    "author": "team loyalty",
+    "license": "ISC",
     "files": [
-        "lib"
+        "lib/"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WeltN24/la-CASino-user.git"
+    },
+    "bugs": {
+        "url": "https://github.com/WeltN24/la-CASino-user/issues"
+    },
+    "homepage": "https://github.com/WeltN24/la-CASino-user#readme",
     "main": "lib/index.js",
-    "typings": "lib/index.d.ts",
+    "typings": "lib/typings/index.d.ts",
     "scripts": {
         "clean": "rimraf lib",
         "lint": "tslint --force --format verbose \"src/**/*.ts\"",
@@ -34,8 +38,5 @@
         "ts-node": "^1.0.0",
         "tslint": "^4.0.0",
         "typescript": "^2.0.0"
-    },
-    "engines": {
-        "node": ">=4.0.0"
     }
 }

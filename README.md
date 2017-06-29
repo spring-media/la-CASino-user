@@ -3,7 +3,7 @@
 Small js library that gives you information about user login and abo state.
 
 ### Install:
-    npm i -D github:WeltN24/la-CASino-user
+    npm i --save @weltn24/la-casino-user
 
 ### Usage of library:
 

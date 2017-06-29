@@ -8,8 +8,7 @@ export function getUser(): User {
     return UserService.instance().getUser();
 }
 
-export function getUserProducts():
-Array<string> {
+export function getUserProducts(): Array<string> {
     return getUser().getProducts();
 }
 

@@ -84,5 +84,17 @@ describe("UserService Tests", (): any => {
         expect(userService.isUpdateForced()).to.be.true;
     });
 
+    it("should include mfa info", () => {
+        document.cookie = "userdata=eyJpZCI6IkFTQUc3MzQxNTM0IiwiZm4iOiJNYWNpZWoiLCJsbiI6IlJvc2llayIsImEiOnRydWUsInAiO" +
+            "ltdLCJleHAiOjE1MDc4MTg0NDc1NDAsIm1mYSI6dHJ1ZX0jIyN2cWlHaEprVjFLZWVhcFltd19Vc2djckxYc0kzZDhZR3I0WkNEdkFLeXpVM" +
+            "mZKd1JBS0J6MEQ1WFhqdXlRVGZFNmNVR3BJMFJiM1pqeTloZXV0UV9EZ0lCNmtjOW43VWlHSzJaSzZ2enNNd2RWMEpNYkw4dGUxYm90MHlSWm9" +
+            "JNERiNmViN185OUgzOWJWSHZYVHhZajZjQ3hZMlBxNlpSX0NXOW1MYVZhbW1PM1dfZTZOMWF2NnAzRXBpOUtHR0VETUJqeVMxRlZZd2YzOEMy" +
+            "b2tjZHl0eldwTGFIQWc4U1JVVVlHUzBYREJERUVreUJ6M2JNVGpYYzNZUzRCXzI0aFV6d3B4ZDU5MVJlMEZMOGI3SV9oVVlOYjhMT1JBX0dqa" +
+            "GlsWU5DRWt3RFlHUWdob21DdF82WWxsalJNZzlMSTJWZDZ2cTBOQjZRa3lwTTZNLU1KV2c";
+        const userService: UserService = UserService.instance();
+        const user: User = userService.getUser();
+        expect(user.getMfa()).to.be.true;
+    });
+
 
 });

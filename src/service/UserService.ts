@@ -62,7 +62,7 @@ export class UserService {
             const urlsaveReplaced: string = data.replace("_", "/").replace("-", "+");
             const decodedData: string = Base64.decode(urlsaveReplaced);
             const userJson: any = this.extractPayloadJSON(decodedData);
-            return new User(userJson.id, userJson.fn, userJson.ln, new Date(userJson.exp), userJson.a, userJson.p, data);
+            return new User(userJson.id, userJson.fn, userJson.ln, new Date(userJson.exp), userJson.a, userJson.p, data, userJson.mfa);
         } catch (e) {
             this.LOG.error("invalid/unparsable user session information value:", e);
             this.invalidData = true;

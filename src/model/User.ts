@@ -7,8 +7,9 @@ export class User {
     private a: boolean; //activated
     private p: string[]; // products
     private token: string;
+    private mfa: boolean;
 
-    constructor(id: string, fn: string, ln: string, exp: Date, a: boolean, p: string[], token: string) {
+    constructor(id: string, fn: string, ln: string, exp: Date, a: boolean, p: string[], token: string, mfa: boolean = false) {
         this.id = id;
         this.fn = fn;
         this.ln = ln;
@@ -16,6 +17,7 @@ export class User {
         this.a = a;
         this.p = p;
         this.token = token;
+        this.mfa = mfa;
     }
 
     public getSsoId(): string {
@@ -44,5 +46,9 @@ export class User {
 
     public getToken(): string {
         return this.token;
+    }
+
+    public getMfa(): boolean {
+        return this.mfa;
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "@weltn24/la-casino-user",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "get user state on welt.de",
     "author": "team loyalty",
     "license": "ISC",
@@ -21,9 +21,9 @@
         "clean": "rimraf lib",
         "lint": "tslint --force --format verbose \"src/**/*.ts\"",
         "build": "npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty",
-        "test": "npm run build && mocha --compilers ts:ts-node/register --recursive test/**/*.spec.ts",
-        "watch": "npm run build -- --watch",
-        "watch:test": "npm run test -- --watch"
+        "test": "tsc --project tsconfig.test.json && mocha -r jsdom-global/register \"build/**/*.spec.js\"",
+        "test-ci": "supervisor -w src -x mocha -e js -n exit -- -r jsdom-global/register \"dist/**/*.spec.js\"",
+        "watch": "npm run build -- --watch"
     },
     "dependencies": {},
     "devDependencies": {
@@ -31,12 +31,11 @@
         "@types/mocha": "^2.0.0",
         "@types/node": "6.0.31",
         "chai": "^3.0.0",
-        "jsdom": "9.9.1",
-        "jsdom-global": "^2.1.1",
-        "mocha": "^3.0.0",
+        "jsdom": "11.1.0",
+        "jsdom-global": "3.0.2",
+        "mocha": "3.4.2",
         "rimraf": "^2.0.0",
-        "ts-node": "^1.0.0",
-        "tslint": "3.15.1",
-        "typescript": "^2.0.0"
+        "tslint": "5.5.0",
+        "typescript": "2.5.2"
     }
 }

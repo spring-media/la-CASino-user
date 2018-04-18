@@ -9,12 +9,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/WeltN24/la-CASino-user.git"
+        "url": "git+https://github.com/spring-media/la-CASino-user.git"
     },
     "bugs": {
-        "url": "https://github.com/WeltN24/la-CASino-user/issues"
+        "url": "https://github.com/spring-media/la-CASino-user/issues"
     },
-    "homepage": "https://github.com/WeltN24/la-CASino-user#readme",
+    "homepage": "https://github.com/spring-media/la-CASino-user#readme",
     "main": "lib/index.js",
     "typings": "lib/typings/index.d.ts",
     "scripts": {

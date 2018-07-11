@@ -18,7 +18,7 @@ node('ecs-slave') {
             stage ("Install dependencies") {
                 sshagent(['06048bce-a762-4e2a-8125-e93c7ed5fbe9']) {
                     sh "npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN"
-                    sh "npm run install"
+                    sh "npm install"
                 }
             }
 

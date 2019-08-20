@@ -8,7 +8,6 @@ if ("master" != env.BRANCH_NAME && !env.CHANGE_ID) {
 node('ecs-slave') {
     ansiColor('xterm') {
         withCredentials([
-                [$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: '947ad8d4-b53a-42c1-b0ed-e2fd68084ffe', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'],
                 [$class: 'StringBinding', credentialsId: 'NPM_AUTH_TOKEN', variable: 'NPM_AUTH_TOKEN']
         ]) {
             stage("Checkout") {
